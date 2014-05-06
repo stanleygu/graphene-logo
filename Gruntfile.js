@@ -338,6 +338,22 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    // Deploying with buildcontrol
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'https://github.com/stanleygu/graphene-logo.git',
+          branch: 'gh-pages'
+        }
+      }
     }
   });
 
