@@ -132,3 +132,20 @@ Inside the `template.html` file:
   </g>
 </svg>
 ```
+
+Inside [`main.html`]:
+
+```html
+<sg-graphene imports="exports" template="views/template.html"></sg-graphene>
+
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<span style="
+      font-family: 'Lobster', cursive;
+      font-size: 120px;
+      position: absolute;
+      top: 125px;
+      left: 100px;
+      vertical-align:top;
+      background-color: rgba(255, 255, 255, 0.64);
+    ">Graphene.js</span>
+```
