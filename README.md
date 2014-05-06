@@ -63,9 +63,11 @@ var addHexagonNodes = function(size, x, y, nodes) {
   });
 };
 var makePath = function(x, y, size) {
-  var d = 'M ' + (x + size * Math.cos(-Math.PI / 3)) + ' ' + (y + size * Math.sin(-Math.PI / 3));
+  var d = 'M ' + (x + size * Math.cos(-Math.PI / 3)) + ' ' +
+          (y + size * Math.sin(-Math.PI / 3));
   _.each(angles, function(angle) {
-    d += ' ' + (x + size * Math.cos(angle * Math.PI / 180)) + ' ' + (y + size * Math.sin(angle * Math.PI / 180));
+    d += ' ' + (x + size * Math.cos(angle * Math.PI / 180)) +
+         ' ' + (y + size * Math.sin(angle * Math.PI / 180));
   });
 
   return d;
