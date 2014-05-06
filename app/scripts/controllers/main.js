@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('grapheneLogoApp')
-  .controller('MainCtrl', function($scope, $log) {
+  .controller('MainCtrl', function($scope) {
     var height = 400;
     var width = 400;
     var nodes = [];
@@ -35,9 +35,7 @@ angular.module('grapheneLogoApp')
       return d;
     };
 
-    _.each(vRange, function(y, iy) {
-      $log.info(y, iy);
-
+    _.each(vRange, function(y) {
       _.each(hRange, function(x, ix) {
         if (ix % 2 === 0) {
           addHexagonNodes(size, x, y, nodes);
