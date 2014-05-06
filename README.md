@@ -30,11 +30,14 @@ Install graphene using `bower`:
 
 Inside [`app.js`](https://github.com/stanleygu/graphene-logo/blob/master/app/scripts/app.js):
 
+```javascript
     angular
       .module('grapheneLogoApp', ['sg.graphene']);
+```
 
 Inside [`main.js`](https://github.com/stanleygu/graphene-logo/blob/master/app/scripts/controllers/main.js):
 
+```javascript
     var height = 400;
     var width = 400;
     var nodes = [];
@@ -93,9 +96,11 @@ Inside [`main.js`](https://github.com/stanleygu/graphene-logo/blob/master/app/sc
       paths: paths,
       nodeSize: nodeSize
     };
+```
 
 Inside the `template.html` file:
 
+```html
     <svg 
       xmlns="http://www.w3.org/2000/svg"
       case-sensitive="viewBox"
@@ -126,4 +131,4 @@ Inside the `template.html` file:
         />
       </g>
     </svg>
-
+```
