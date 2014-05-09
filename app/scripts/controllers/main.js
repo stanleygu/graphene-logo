@@ -6,8 +6,8 @@ angular.module('grapheneLogoApp')
     var width = 400;
     var nodes = []; // stores vertixes of each hexagon
     var paths = []; // stores the paths of each hexagon
-    var size = 20; // 'radius' of each hexagon, middle to vertex
-    var nodeSize = 5; // radius of vertex
+    var size = 40; // 'radius' of each hexagon, middle to vertex
+    var nodeSize = 10; // radius of vertex
 
     var centerToEdge = size * Math.sin(Math.PI / 3); // center of hex to perpendicular edge
     var edge = 2 * size * Math.cos(Math.PI / 3); // edge length
