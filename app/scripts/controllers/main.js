@@ -16,14 +16,11 @@ angular.module('grapheneLogoApp')
     var angles = _.range(0, 360, 60); // angles in a hexagon
 
     var addHexagonNodes = function(size, x, y, nodes) {
-      var addNode = function(deg, x, y, nodes, size) {
-        nodes.push({
-          x: x + size * Math.cos(deg * Math.PI / 180),
-          y: y + size * Math.sin(deg * Math.PI / 180)
-        });
-      };
       _.each(angles, function(angle) {
-        addNode(angle, x, y, nodes, size);
+        nodes.push({
+          x: x + size * Math.cos(angle * Math.PI / 180),
+          y: y + size * Math.sin(angle * Math.PI / 180)
+        });
       });
     };
     var makePath = function(x, y, size) {
